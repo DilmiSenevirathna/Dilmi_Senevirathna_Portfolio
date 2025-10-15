@@ -28,6 +28,7 @@ export const QAReports = () => {
     {
       title: "ArivPay Sign-Up Process - Playwright Test Automation",
       description: "This project helped me strengthen my skills in UI automation, test design, and validation of multi-step registration workflows — key areas in ensuring a smooth and reliable user experience.",
+      videoUrl: "/videos/ariv_pay.webm",
       reportUrl: "https://dilsenevirathna.github.io/ArivPay_SignUp_process_PlaywrightsTest/",
       github: "https://github.com/DilSenevirathna/ArivPay_SignUp_process_PlaywrightsTestrepo",
       details: {
@@ -188,16 +189,16 @@ export const QAReports = () => {
 
           {/* Automation Testing */}
           <TabsContent value="automation" className="space-y-6">
-            {automationProjects.map((project, index) => (
-              <Card
-                key={index}
-                className="p-8 border-2 hover:shadow-xl transition-all group"
-              >
-                <div className="grid lg:grid-cols-2 gap-8">
-                  {/* Video Section */}
-                  {project.videoUrl && (
-                    <div className="space-y-4">
-                      <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video">
+            <div className="grid lg:grid-cols-2 gap-6">
+              {automationProjects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="p-6 border-2 hover:shadow-xl transition-all group flex flex-col"
+                >
+                  <div className="space-y-6 flex-1 flex flex-col">
+                    {/* Video Section */}
+                    {project.videoUrl && (
+                      <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video mb-4">
                         <video
                           controls
                           className="w-full h-full object-cover"
@@ -207,7 +208,47 @@ export const QAReports = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <div className="flex gap-2">
+                    )}
+
+                    {/* Content Section */}
+                    <div className="space-y-4 flex-1">
+                      <div>
+                        <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-3 group-hover:animate-pulse-glow">
+                          <Play className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4 text-sm">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-2">🧩 What I Worked On:</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          {project.details.workedOn.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold mb-2">🧠 Key Learnings:</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          {project.details.learnings.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex gap-2 mt-auto pt-4">
                         <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
                           <a href={project.reportUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4" />
@@ -221,49 +262,10 @@ export const QAReports = () => {
                         </Button>
                       </div>
                     </div>
-                  )}
-
-                  {/* Content Section */}
-                  <div className="space-y-6">
-                    <div>
-                      <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
-                        <Play className="h-6 w-6 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2">🧩 What I Worked On:</h4>
-                      <ul className="space-y-2 text-muted-foreground">
-                        {project.details.workedOn.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-primary mt-1">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2">🧠 Key Learnings:</h4>
-                      <ul className="space-y-2 text-muted-foreground">
-                        {project.details.learnings.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-primary mt-1">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+                ))}
+              </div>
           </TabsContent>
 
           {/* Certifications */}
