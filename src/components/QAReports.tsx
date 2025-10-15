@@ -24,6 +24,27 @@ export const QAReports = () => {
           "Strengthened analytical mindset in identifying and solving performance issues"
         ]
       }
+    },
+    {
+      title: "ArivPay Sign-Up Process - Playwright Test Automation",
+      description: "This project helped me strengthen my skills in UI automation, test design, and validation of multi-step registration workflows — key areas in ensuring a smooth and reliable user experience.",
+      reportUrl: "https://dilsenevirathna.github.io/ArivPay_SignUp_process_PlaywrightsTest/",
+      github: "https://github.com/DilSenevirathna/ArivPay_SignUp_process_PlaywrightsTestrepo",
+      details: {
+        workedOn: [
+          "Automated the four-step registration process of ArivPay using Playwright",
+          "Validated input fields, error handling, and user feedback messages",
+          "Implemented end-to-end tests covering both valid and invalid scenarios",
+          "Designed test structure and scripts following the Page Object Model (POM) for scalability",
+          "Generated and hosted test execution reports using GitHub Pages",
+          "Tools: Playwright, TypeScript/JavaScript, GitHub Actions, HTML Reports"
+        ],
+        learnings: [
+          "Enhanced understanding of modern automation frameworks",
+          "Practiced modular test design and data-driven testing approaches",
+          "Gained experience in reporting and version control using GitHub"
+        ]
+      }
     }
   ];
 
@@ -174,31 +195,33 @@ export const QAReports = () => {
               >
                 <div className="grid lg:grid-cols-2 gap-8">
                   {/* Video Section */}
-                  <div className="space-y-4">
-                    <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video">
-                      <video
-                        controls
-                        className="w-full h-full object-cover"
-                        poster="/placeholder.svg"
-                      >
-                        <source src={project.videoUrl} type="video/webm" />
-                        Your browser does not support the video tag.
-                      </video>
+                  {project.videoUrl && (
+                    <div className="space-y-4">
+                      <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video">
+                        <video
+                          controls
+                          className="w-full h-full object-cover"
+                          poster="/placeholder.svg"
+                        >
+                          <source src={project.videoUrl} type="video/webm" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
+                          <a href={project.reportUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4" />
+                            View Report
+                          </a>
+                        </Button>
+                        <Button size="sm" variant="outline" className="gap-2" asChild>
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
-                        <a href={project.reportUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4" />
-                          View Report
-                        </a>
-                      </Button>
-                      <Button size="sm" variant="outline" className="gap-2" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
+                  )}
 
                   {/* Content Section */}
                   <div className="space-y-6">
