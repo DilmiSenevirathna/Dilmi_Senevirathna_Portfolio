@@ -1,9 +1,32 @@
-import { FileCheck, Github, ExternalLink, Award } from "lucide-react";
+import { FileCheck, Github, ExternalLink, Award, Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const QAReports = () => {
+  const automationProjects = [
+    {
+      title: "Sufra OS - Full Performance Testing Project",
+      description: "This project helped me strengthen my skills in ensuring software reliability, responsiveness, and stability under varying user loads.",
+      videoUrl: "/videos/sufra_os.webm",
+      reportUrl: "https://dilsenevirathna.github.io/Sufra_OS_Full-Testing-Project/index.html",
+      github: "https://github.com/DilSenevirathna/Sufra_OS_Full-Testing-Project",
+      details: {
+        workedOn: [
+          "Designed and executed load and stress tests using Apache JMeter",
+          "Measured response time, throughput, and error rate under different conditions",
+          "Analyzed performance bottlenecks and suggested improvements",
+          "Created detailed performance reports to visualize results and insights"
+        ],
+        learnings: [
+          "Improved understanding of performance testing lifecycle",
+          "Learned to interpret metrics to evaluate system health",
+          "Strengthened analytical mindset in identifying and solving performance issues"
+        ]
+      }
+    }
+  ];
+
   const testReports = [
     {
       title: "Manual Testing – LankaJobs.lk",
@@ -101,8 +124,9 @@ export const QAReports = () => {
         </div>
 
         <Tabs defaultValue="reports" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="reports">Test Reports</TabsTrigger>
+            <TabsTrigger value="automation">Automation Testing</TabsTrigger>
             <TabsTrigger value="certifications">Certifications</TabsTrigger>
           </TabsList>
 
@@ -139,6 +163,84 @@ export const QAReports = () => {
                 </Card>
               ))}
             </div>
+          </TabsContent>
+
+          {/* Automation Testing */}
+          <TabsContent value="automation" className="space-y-6">
+            {automationProjects.map((project, index) => (
+              <Card
+                key={index}
+                className="p-8 border-2 hover:shadow-xl transition-all group"
+              >
+                <div className="grid lg:grid-cols-2 gap-8">
+                  {/* Video Section */}
+                  <div className="space-y-4">
+                    <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video">
+                      <video
+                        controls
+                        className="w-full h-full object-cover"
+                        poster="/placeholder.svg"
+                      >
+                        <source src={project.videoUrl} type="video/webm" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
+                        <a href={project.reportUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4" />
+                          View Report
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="outline" className="gap-2" asChild>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="space-y-6">
+                    <div>
+                      <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
+                        <Play className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">🧩 What I Worked On:</h4>
+                      <ul className="space-y-2 text-muted-foreground">
+                        {project.details.workedOn.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">🧠 Key Learnings:</h4>
+                      <ul className="space-y-2 text-muted-foreground">
+                        {project.details.learnings.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </TabsContent>
 
           {/* Certifications */}
