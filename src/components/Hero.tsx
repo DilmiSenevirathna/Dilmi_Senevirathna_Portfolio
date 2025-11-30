@@ -25,11 +25,11 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 font-light">
-              Software Engineer | Web Developer | QA Engineer
+              QA Engineer | Software Engineer | Web Developer
             </p>
             
             <p className="text-lg text-white/80 max-w-xl">
-              Software Engineer and Quality Assurance Engineer with over 1.5 years of experience in front-end development and software testing. Passionate about building responsive, high-performance web applications.
+              Quality Assurance Engineer with over 1.5 years of experience specializing in test automation, performance testing, and software quality validation. Skilled in Playwright, Selenium, JMeter, and modern testing methodologies.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
