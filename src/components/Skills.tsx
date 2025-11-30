@@ -1,15 +1,22 @@
 import { Card } from "@/components/ui/card";
 
 export const Skills = () => {
-  const skills = [
+  const qaSkills = [
+    { name: "Playwright", icon: "playwright", color: "#2EAD33" },
+    { name: "Selenium", icon: "selenium", color: "#43B02A" },
+    { name: "JMeter", icon: "apachejmeter", color: "#D22128" },
+    { name: "Jira", icon: "jira", color: "#0052CC" },
+    { name: "Postman", icon: "postman", color: "#FF6C37" },
+  ];
+
+  const developmentSkills = [
+    { name: "JavaScript", icon: "javascript", color: "#F7DF1E" },
+    { name: "React", icon: "react", color: "#61DAFB" },
     { name: "HTML", icon: "html5", color: "#E34F26" },
     { name: "CSS", icon: "css3", color: "#1572B6" },
-    { name: "React", icon: "react", color: "#61DAFB" },
     { name: "PHP", icon: "php", color: "#777BB4" },
-    { name: "JavaScript", icon: "javascript", color: "#F7DF1E" },
     { name: "Node.js", icon: "nodejs", color: "#339933" },
     { name: "SQL", icon: "mysql", color: "#4479A1" },
-    { name: "Figma", icon: "figma", color: "#F24E1E" },
     { name: "Java", icon: "java", color: "#007396" },
     { name: "Python", icon: "python", color: "#3776AB" },
     { name: "Vue.js", icon: "vuejs", color: "#4FC08D" },
@@ -17,10 +24,7 @@ export const Skills = () => {
     { name: "React Native", icon: "react", color: "#61DAFB" },
     { name: "WordPress", icon: "wordpress", color: "#21759B" },
     { name: "Android Studio", icon: "androidstudio", color: "#3DDC84" },
-    { name: "Selenium", icon: "selenium", color: "#43B02A" },
-    { name: "Playwright", icon: "playwright", color: "#2EAD33" },
-    { name: "JMeter", icon: "apachejmeter", color: "#D22128" },
-    { name: "Jira", icon: "jira", color: "#0052CC" },
+    { name: "Figma", icon: "figma", color: "#F24E1E" },
   ];
 
   return (
@@ -32,26 +36,62 @@ export const Skills = () => {
           </h2>
           <div className="w-20 h-1 gradient-primary mx-auto rounded-full"></div>
           <p className="text-muted-foreground mt-4 text-lg">
-            Proficient in a wide range of modern technologies and tools
+            Specialized in QA automation tools and modern development technologies
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
-            <Card
-              key={index}
-              className="p-6 flex flex-col items-center justify-center gap-3 hover:shadow-lg transition-all hover:-translate-y-2 border-2 group cursor-pointer"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <div className="text-4xl group-hover:scale-110 transition-transform">
-                <i
-                  className={`devicon-${skill.icon}-plain colored`}
-                  style={{ color: skill.color }}
-                ></i>
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* QA & Testing Tools - Primary Focus */}
+          <div className="space-y-6">
+            <div className="text-center">
+              <div className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4 text-primary border border-primary/20">
+                🎯 QA & Testing Tools
               </div>
-              <span className="font-medium text-sm text-center">{skill.name}</span>
-            </Card>
-          ))}
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+              {qaSkills.map((skill, index) => (
+                <Card
+                  key={index}
+                  className="p-6 flex flex-col items-center justify-center gap-3 hover:shadow-lg transition-all hover:-translate-y-2 border-2 group cursor-pointer"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                    <i
+                      className={`devicon-${skill.icon}-plain colored`}
+                      style={{ color: skill.color }}
+                    ></i>
+                  </div>
+                  <span className="font-medium text-sm text-center">{skill.name}</span>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Development Skills */}
+          <div className="space-y-6">
+            <div className="text-center">
+              <div className="inline-block px-6 py-2 bg-muted/50 backdrop-blur-sm rounded-full text-sm font-semibold mb-4 text-muted-foreground border border-muted">
+                💻 Development Skills
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {developmentSkills.map((skill, index) => (
+                <Card
+                  key={index}
+                  className="p-6 flex flex-col items-center justify-center gap-3 hover:shadow-lg transition-all hover:-translate-y-2 border-2 group cursor-pointer"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                    <i
+                      className={`devicon-${skill.icon}-plain colored`}
+                      style={{ color: skill.color }}
+                    ></i>
+                  </div>
+                  <span className="font-medium text-sm text-center">{skill.name}</span>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Add devicon CDN */}
