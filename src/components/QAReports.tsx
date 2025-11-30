@@ -133,15 +133,18 @@ export const QAReports = () => {
   ];
 
   return (
-    <section id="qa-reports" className="py-24 bg-muted/30">
+    <section id="qa-reports" className="py-24 bg-gradient-to-b from-background via-muted/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="inline-block px-6 py-2 bg-primary/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4 text-primary border border-primary/20">
+            🎯 Quality Assurance Expertise
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             QA Reports & <span className="gradient-text">Certifications</span>
           </h2>
-          <div className="w-20 h-1 gradient-primary mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-4 text-lg">
-            Quality assurance documentation and professional certifications
+          <div className="w-24 h-1.5 gradient-primary mx-auto rounded-full"></div>
+          <p className="text-muted-foreground mt-6 text-lg max-w-3xl mx-auto">
+            Comprehensive quality assurance portfolio showcasing automated testing, performance validation, and professional certifications in software testing methodologies
           </p>
         </div>
 
