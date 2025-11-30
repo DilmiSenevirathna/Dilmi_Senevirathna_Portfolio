@@ -7,18 +7,26 @@ export const Experience = () => {
       year: "2024 - 2025",
       roles: [
         {
-          title: "Software Engineer",
+          title: "Quality Assurance Engineer",
           company: "eSupport Technologies",
           responsibilities: [
-            "Developed and tested software applications",
-            "Participated in QA processes and test automation",
-            "Collaborated on team projects using Agile methodologies",
+            "Designed and executed comprehensive test plans for web applications ensuring quality standards",
+            "Developed automated test scripts using Playwright and Selenium, reducing testing time by 60%",
+            "Performed load and performance testing using Apache JMeter to identify system bottlenecks",
+            "Created detailed test reports and documentation, tracking defects through Jira",
+            "Collaborated with development teams in Agile/Scrum environment for continuous testing",
+            "Conducted API testing using Postman to validate backend functionality",
+            "Implemented test frameworks following Page Object Model (POM) for maintainability",
           ],
         },
         {
           title: "Quality Assurance Engineer Intern",
           company: "eSupport Technologies",
-          responsibilities: ["Manual & Automation testing software applications"],
+          responsibilities: [
+            "Executed manual testing for web applications, identifying and documenting critical bugs",
+            "Participated in automation testing initiatives using Selenium and Playwright",
+            "Assisted in creating test cases and test scenarios for various project modules",
+          ],
         },
       ],
     },
