@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "QA Reports", href: "#qa-reports" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Professional Projects", href: "#professional-projects" },
+  { label: "QA Reports", href: "#qa-reports" },
   { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
