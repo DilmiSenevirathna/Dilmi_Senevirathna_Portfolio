@@ -1,9 +1,31 @@
-import { FileCheck, Github, ExternalLink, Award, Play } from "lucide-react";
+import { FileCheck, Github, ExternalLink, Award, Play, Briefcase } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const QAReports = () => {
+  const professionalProjects = [
+    // Add your real-world professional projects here
+    // Example structure:
+    // {
+    //   title: "Project Name",
+    //   company: "Company Name",
+    //   description: "Project description and what you accomplished",
+    //   videoUrl: "/videos/project_video.webm",
+    //   github: "https://github.com/username/repo",
+    //   details: {
+    //     workedOn: [
+    //       "Task 1",
+    //       "Task 2"
+    //     ],
+    //     learnings: [
+    //       "Learning 1",
+    //       "Learning 2"
+    //     ]
+    //   }
+    // }
+  ];
+
   const automationProjects = [
     {
       title: "Sufra OS - Full Performance Testing Project",
@@ -148,12 +170,104 @@ export const QAReports = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="automation" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+        <Tabs defaultValue="professional" className="max-w-6xl mx-auto">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="professional">Professional Projects</TabsTrigger>
             <TabsTrigger value="automation">Automation Testing</TabsTrigger>
             <TabsTrigger value="reports">Test Reports</TabsTrigger>
             <TabsTrigger value="certifications">Certifications</TabsTrigger>
           </TabsList>
+
+          {/* Professional Projects */}
+          <TabsContent value="professional" className="space-y-6">
+            {professionalProjects.length === 0 ? (
+              <Card className="p-12 text-center border-2 border-dashed">
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="h-8 w-8 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Professional Projects Coming Soon</h3>
+                <p className="text-muted-foreground">
+                  Real-world projects worked on during employment will be showcased here
+                </p>
+              </Card>
+            ) : (
+              <div className="grid lg:grid-cols-2 gap-6">
+                {professionalProjects.map((project, index) => (
+                  <Card
+                    key={index}
+                    className="p-6 border-2 hover:shadow-xl transition-all group flex flex-col"
+                  >
+                    <div className="space-y-6 flex-1 flex flex-col">
+                      {/* Video Section */}
+                      {project.videoUrl && (
+                        <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video mb-4">
+                          <video
+                            controls
+                            className="w-full h-full object-cover"
+                            poster="/placeholder.svg"
+                          >
+                            <source src={project.videoUrl} type="video/webm" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      )}
+
+                      {/* Content Section */}
+                      <div className="space-y-4 flex-1">
+                        <div>
+                          <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-3 group-hover:animate-pulse-glow">
+                            <Briefcase className="h-6 w-6 text-white" />
+                          </div>
+                          <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
+                            {project.title}
+                          </h3>
+                          <p className="text-primary font-semibold mb-2">{project.company}</p>
+                          <p className="text-muted-foreground text-sm">
+                            {project.description}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h4 className="font-semibold mb-2">🧩 What I Worked On:</h4>
+                          <ul className="space-y-1 text-muted-foreground text-sm">
+                            {project.details.workedOn.map((item, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <span className="text-primary mt-1">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h4 className="font-semibold mb-2">🧠 Key Learnings:</h4>
+                          <ul className="space-y-1 text-muted-foreground text-sm">
+                            {project.details.learnings.map((item, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <span className="text-primary mt-1">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="flex gap-2 mt-auto pt-4">
+                          {project.github && (
+                            <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="h-4 w-4" />
+                                View GitHub
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
 
           {/* Automation Testing */}
           <TabsContent value="automation" className="space-y-6">
