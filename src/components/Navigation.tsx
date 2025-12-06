@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bug, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -69,9 +69,13 @@ export const Navigation = () => {
           {/* Logo */}
           <a
             href="#"
-            className="text-xl font-bold bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent hover:scale-105 transition-all duration-300 tracking-tight"
+            className="flex items-center gap-2 hover:scale-105 transition-all duration-300"
           >
-            DS
+            <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent shadow-lg">
+              <Bug className="w-5 h-5 text-primary-foreground" />
+              <ShieldCheck className="w-3 h-3 text-primary-foreground absolute -bottom-0.5 -right-0.5" />
+            </div>
+            <span className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hidden sm:inline">QA</span>
           </a>
 
           {/* Desktop Navigation */}
