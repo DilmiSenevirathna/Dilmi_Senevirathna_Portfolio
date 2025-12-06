@@ -21,7 +21,6 @@ export const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
       const sections = navItems.map((item) =>
         document.querySelector(item.href) as HTMLElement | null
       );
@@ -59,9 +58,9 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg shadow-md"
+          ? "bg-background/60 backdrop-blur-xl shadow-lg border-b border-border/40"
           : "bg-transparent"
       }`}
     >
@@ -70,24 +69,27 @@ export const Navigation = () => {
           {/* Logo */}
           <a
             href="#"
-            className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
+            className="text-xl font-bold bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent hover:scale-105 transition-all duration-300 tracking-tight"
           >
             Dilmi Senevirathna
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1 bg-muted/30 backdrop-blur-sm rounded-full px-2 py-1.5 border border-border/30">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className={`px-4 py-2 rounded-lg transition-all ${
+                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
                   activeSection === item.href
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary"
+                    ? "text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {item.label}
+                {activeSection === item.href && (
+                  <span className="absolute inset-0 bg-primary rounded-full animate-fade-in" />
+                )}
+                <span className="relative z-10">{item.label}</span>
               </button>
             ))}
           </div>
@@ -96,31 +98,36 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden rounded-full hover:bg-muted/50 border border-border/30"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
-            {navItems.map((item) => (
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
+            isMobileMenuOpen ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="bg-muted/30 backdrop-blur-sm rounded-2xl border border-border/30 p-2 mt-2">
+            {navItems.map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className={`block w-full text-left px-4 py-3 rounded-lg transition-all ${
+                className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${
                   activeSection === item.href
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary"
+                    ? "bg-primary text-primary-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 {item.label}
               </button>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
