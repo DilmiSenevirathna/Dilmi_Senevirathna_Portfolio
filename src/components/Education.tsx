@@ -43,7 +43,7 @@ export const Education = () => {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Bachelor of Information Technology (BIT)</h3>
                 <p className="text-primary font-semibold mb-2">University of Moratuwa</p>
-                <p className="text-muted-foreground mb-2">2019 - 2022</p>
+                <p className="text-muted-foreground mb-2">2025 - Present</p>
                 <p className="text-muted-foreground">
                   Completed degree with focus on software development, database management, and IT infrastructure.
                 </p>
