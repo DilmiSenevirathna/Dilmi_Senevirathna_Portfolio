@@ -4,6 +4,9 @@ export const Skills = () => {
   const qaSkills = [
     { name: "Playwright", icon: "playwright", color: "#2EAD33" },
     { name: "Selenium", icon: "selenium", color: "#43B02A" },
+    { name: "Cypress", icon: "cypressio", color: "#69D3A7" },
+    { name: "Appium", icon: "android", color: "#662D91" },
+    { name: "pytest", icon: "pytest", color: "#0A9EDC" },
     { name: "JMeter", icon: "apachejmeter", color: "#D22128" },
     { name: "Jira", icon: "jira", color: "#0052CC" },
     { name: "Postman", icon: "postman", color: "#FF6C37" },
