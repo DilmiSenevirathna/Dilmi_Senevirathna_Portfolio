@@ -71,7 +71,7 @@ export const Navigation = () => {
             href="#"
             className="text-xl font-bold bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent hover:scale-105 transition-all duration-300 tracking-tight"
           >
-            Dilmi Senevirathna
+            DS
           </a>
 
           {/* Desktop Navigation */}
