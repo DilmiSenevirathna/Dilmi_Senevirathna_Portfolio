@@ -84,11 +84,11 @@ export const Hero = () => {
           {/* Right content - Profile Image */}
           <div className="flex justify-center animate-fade-in">
             <div className="relative">
-              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-white/30 shadow-2xl animate-float ring-4 ring-white/10 ring-offset-4 ring-offset-transparent">
+              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-white/30 shadow-2xl animate-float ring-4 ring-white/10 ring-offset-4 ring-offset-transparent bg-white/10">
                 <img 
                   src={profilePicture} 
                   alt="Dilmi Senevirathna" 
-                  className="w-full h-full object-cover object-top scale-110"
+                  className="w-full h-full object-contain"
                 />
               </div>
               {/* Decorative elements */}
