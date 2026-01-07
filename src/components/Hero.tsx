@@ -1,5 +1,6 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePicture from "@/assets/profile-picture.png";
 
 export const Hero = () => {
   return (
@@ -84,9 +85,11 @@ export const Hero = () => {
           <div className="flex justify-center animate-fade-in">
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl animate-float">
-                <div className="w-full h-full bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center text-white text-6xl font-bold">
-                  DS
-                </div>
+                <img 
+                  src={profilePicture} 
+                  alt="Dilmi Senevirathna" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl"></div>
