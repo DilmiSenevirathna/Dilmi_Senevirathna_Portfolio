@@ -32,6 +32,24 @@ export const Education = () => {
             </div>
           </Card>
 
+          {/* BIT Degree */}
+          <Card className="p-8 border-2 hover:shadow-lg transition-all hover:-translate-y-1">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center">
+                  <GraduationCap className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-2">Bachelor of Information Technology (BIT)</h3>
+                <p className="text-primary font-semibold mb-2">University of Moratuwa</p>
+                <p className="text-muted-foreground mb-2">2025 - Present</p>
+                <p className="text-muted-foreground">
+                  Completed degree with focus on software development, database management, and IT infrastructure.
+                </p>
+              </div>
+            </div>
+          </Card>
 
           {/* ISTQB Certificate */}
           <Card className="p-8 border-2 hover:shadow-lg transition-all hover:-translate-y-1">
