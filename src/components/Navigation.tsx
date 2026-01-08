@@ -79,7 +79,11 @@ export const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1 bg-muted/30 backdrop-blur-sm rounded-full px-2 py-1.5 border border-border/30">
+          <div className={`hidden md:flex items-center gap-1 rounded-full px-2 py-1.5 border transition-all duration-500 ${
+            isScrolled 
+              ? "bg-muted/30 backdrop-blur-sm border-border/30" 
+              : "bg-white/10 backdrop-blur-sm border-white/20"
+          }`}>
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -87,7 +91,9 @@ export const Navigation = () => {
                 className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
                   activeSection === item.href
                     ? "text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : isScrolled 
+                      ? "text-muted-foreground hover:text-foreground" 
+                      : "text-white/90 hover:text-white"
                 }`}
               >
                 {activeSection === item.href && (
