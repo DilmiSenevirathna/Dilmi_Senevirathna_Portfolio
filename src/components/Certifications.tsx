@@ -1,9 +1,17 @@
 import { FileText } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import esupportServiceLetter from "@/assets/certificates/esupport-service-letter.jpg";
+import commercializerServiceLetter from "@/assets/certificates/commercializer-service-letter.png";
 
 export const Certifications = () => {
   const documents = [
+    {
+      title: "Internship Service Letter",
+      organization: "Commercializer (Private) Limited",
+      date: "June 2025 - June 2026",
+      description: "Employed as a Quality Assurance Intern, involved in QA activities for products including Sufra OS, ArivPay, and Intaj.",
+      image: commercializerServiceLetter,
+    },
     {
       title: "Internship Service Letter",
       organization: "eSupport Technologies (Pvt) Ltd",
