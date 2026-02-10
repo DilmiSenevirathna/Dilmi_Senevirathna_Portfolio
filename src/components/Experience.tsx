@@ -4,6 +4,23 @@ import { Card } from "@/components/ui/card";
 export const Experience = () => {
   const experiences = [
     {
+      year: "2025 - 2026",
+      roles: [
+        {
+          title: "Quality Assurance Engineer",
+          company: "Commercializer (Private) Limited",
+          responsibilities: [
+            "Performing comprehensive QA activities for products including Sufra OS, ArivPay, and Intaj",
+            "Designing and executing test plans, test cases, and test scripts for web and mobile applications",
+            "Conducting functional, regression, and integration testing to ensure product quality",
+            "Identifying, documenting, and tracking defects using bug tracking tools",
+            "Collaborating with cross-functional development teams to ensure timely delivery of high-quality software",
+            "Participating in sprint planning and daily stand-ups within Agile/Scrum methodology",
+          ],
+        },
+      ],
+    },
+    {
       year: "2024 - 2025",
       roles: [
         {
