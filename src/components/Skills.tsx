@@ -10,6 +10,7 @@ export const Skills = () => {
     { name: "JMeter", icon: "apachejmeter", color: "#D22128" },
     { name: "Jira", icon: "jira", color: "#0052CC" },
     { name: "Postman", icon: "postman", color: "#FF6C37" },
+    { name: "Mabl", icon: "mabl", color: "#4A154B" },
   ];
 
   const developmentSkills = [
