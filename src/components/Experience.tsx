@@ -37,7 +37,7 @@ export const Experience = () => {
           ],
         },
         {
-          title: "Quality Assurance Engineer Intern",
+          title: "Software Engineer Intern",
           company: "eSupport Technologies",
           responsibilities: [
             "Executed manual testing for web applications, identifying and documenting critical bugs",
