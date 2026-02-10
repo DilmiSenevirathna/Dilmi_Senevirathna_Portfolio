@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import mablLogo from "@/assets/mabl-logo.png";
 
 export const Skills = () => {
   const qaSkills = [
@@ -10,7 +11,7 @@ export const Skills = () => {
     { name: "JMeter", icon: "apachejmeter", color: "#D22128" },
     { name: "Jira", icon: "jira", color: "#0052CC" },
     { name: "Postman", icon: "postman", color: "#FF6C37" },
-    { name: "Mabl", icon: "mabl", color: "#4A154B" },
+    { name: "Mabl", icon: "mabl", color: "#4A154B", customLogo: true },
   ];
 
   const developmentSkills = [
@@ -60,10 +61,14 @@ export const Skills = () => {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="text-4xl group-hover:scale-110 transition-transform">
-                    <i
-                      className={`devicon-${skill.icon}-plain colored`}
-                      style={{ color: skill.color }}
-                    ></i>
+                    {skill.customLogo ? (
+                      <img src={mablLogo} alt={skill.name} className="w-10 h-10 object-contain" />
+                    ) : (
+                      <i
+                        className={`devicon-${skill.icon}-plain colored`}
+                        style={{ color: skill.color }}
+                      ></i>
+                    )}
                   </div>
                   <span className="font-medium text-sm text-center">{skill.name}</span>
                 </Card>
