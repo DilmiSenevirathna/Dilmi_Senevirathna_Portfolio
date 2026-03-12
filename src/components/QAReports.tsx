@@ -271,41 +271,6 @@ export const QAReports = () => {
 
           {/* Automation Testing */}
           <TabsContent value="automation" className="space-y-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {testReports.map((report, index) => (
-                <Card
-                  key={index}
-                  className="p-6 border-2 hover:shadow-xl transition-all hover:-translate-y-2 group"
-                >
-                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
-                    <FileCheck className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
-                    {report.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 text-sm line-clamp-3">
-                    {report.description}
-                  </p>
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
-                      <a href={report.reportUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                        View
-                      </a>
-                    </Button>
-                    <Button size="sm" variant="outline" className="gap-2" asChild>
-                      <a href={report.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          {/* Automation Testing */}
-          <TabsContent value="automation" className="space-y-6">
             <div className="grid lg:grid-cols-2 gap-6">
               {automationProjects.map((project, index) => (
                 <Card
@@ -383,6 +348,41 @@ export const QAReports = () => {
                 </Card>
                 ))}
               </div>
+          </TabsContent>
+
+          {/* Test Reports */}
+          <TabsContent value="reports" className="space-y-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {testReports.map((report, index) => (
+                <Card
+                  key={index}
+                  className="p-6 border-2 hover:shadow-xl transition-all hover:-translate-y-2 group"
+                >
+                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-4 group-hover:animate-pulse-glow">
+                    <FileCheck className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
+                    {report.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm line-clamp-3">
+                    {report.description}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
+                      <a href={report.reportUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                        View
+                      </a>
+                    </Button>
+                    <Button size="sm" variant="outline" className="gap-2" asChild>
+                      <a href={report.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </TabsContent>
 
           {/* Certifications */}
