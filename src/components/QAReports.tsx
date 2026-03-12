@@ -5,28 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const QAReports = () => {
   const professionalProjects = [
-    // Add your real-world professional projects here
-    // Example structure:
-    // {
-    //   title: "Project Name",
-    //   company: "Company Name",
-    //   description: "Project description and what you accomplished",
-    //   videoUrl: "/videos/project_video.webm",
-    //   github: "https://github.com/username/repo",
-    //   details: {
-    //     workedOn: [
-    //       "Task 1",
-    //       "Task 2"
-    //     ],
-    //     learnings: [
-    //       "Learning 1",
-    //       "Learning 2"
-    //     ]
-    //   }
-    // }
-  ];
-
-  const automationProjects = [
     {
       title: "Sufra OS - Full Performance Testing Project",
       description: "This project helped me strengthen my skills in ensuring software reliability, responsiveness, and stability under varying user loads.",
