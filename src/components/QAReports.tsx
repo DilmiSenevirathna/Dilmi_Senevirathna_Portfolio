@@ -149,9 +149,8 @@ export const QAReports = () => {
         </div>
 
         <Tabs defaultValue="professional" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="professional">Professional Projects</TabsTrigger>
-            <TabsTrigger value="automation">Automation Testing</TabsTrigger>
             <TabsTrigger value="reports">Test Reports</TabsTrigger>
             <TabsTrigger value="certifications">Certifications</TabsTrigger>
           </TabsList>
