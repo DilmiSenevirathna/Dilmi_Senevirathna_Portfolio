@@ -193,13 +193,12 @@ export const QAReports = () => {
                       <div className="space-y-4 flex-1">
                         <div>
                           <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center mb-3 group-hover:animate-pulse-glow">
-                            <Briefcase className="h-6 w-6 text-white" />
+                            <Play className="h-6 w-6 text-white" />
                           </div>
-                          <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
+                          <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                             {project.title}
                           </h3>
-                          <p className="text-primary font-semibold mb-2">{project.company}</p>
-                          <p className="text-muted-foreground text-sm">
+                          <p className="text-muted-foreground mb-4 text-sm">
                             {project.description}
                           </p>
                         </div>
@@ -229,14 +228,17 @@ export const QAReports = () => {
                         </div>
 
                         <div className="flex gap-2 mt-auto pt-4">
-                          {project.github && (
-                            <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
-                              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                <Github className="h-4 w-4" />
-                                View GitHub
-                              </a>
-                            </Button>
-                          )}
+                          <Button size="sm" variant="outline" className="gap-2 flex-1" asChild>
+                            <a href={project.reportUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4" />
+                              View Report
+                            </a>
+                          </Button>
+                          <Button size="sm" variant="outline" className="gap-2" asChild>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                              <Github className="h-4 w-4" />
+                            </a>
+                          </Button>
                         </div>
                       </div>
                     </div>
