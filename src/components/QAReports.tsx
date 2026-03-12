@@ -178,11 +178,11 @@ export const QAReports = () => {
                       {/* Video Section */}
                       {project.videoUrl && (
                         <div className="relative rounded-lg overflow-hidden shadow-lg bg-muted aspect-video mb-4">
-                          <video
-                            controls
-                            className="w-full h-full object-cover"
-                            poster="/placeholder.svg"
-                          >
+                        <video
+                          controls
+                          className="w-full h-full object-cover"
+                          poster={project.videoUrl.includes('sufra') ? '/thumbnails/sufra_os_thumb.jpg' : '/thumbnails/ariv_pay_thumb.jpg'}
+                        >
                             <source src={project.videoUrl} type="video/webm" />
                             Your browser does not support the video tag.
                           </video>
