@@ -284,7 +284,7 @@ export const QAReports = () => {
                         <video
                           controls
                           className="w-full h-full object-cover"
-                          poster="/placeholder.svg"
+                          poster={project.videoUrl.includes('sufra') ? '/thumbnails/sufra_os_thumb.jpg' : '/thumbnails/ariv_pay_thumb.jpg'}
                         >
                           <source src={project.videoUrl} type="video/webm" />
                           Your browser does not support the video tag.
