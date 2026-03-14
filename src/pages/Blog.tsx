@@ -31,16 +31,16 @@ During this journey, I've worked with automation tools such as Cypress, Mabl AI,
 
 ## Key Lessons from Automation Testing
 
-### 🔹 Speed and Efficiency Are Essential
+🔹 Speed and Efficiency Are Essential
 Automated test suites can validate large portions of an application within minutes, helping teams detect issues earlier in the development cycle.
 
-### 🔹 Automation Supports Rapid Development
+🔹 Automation Supports Rapid Development
 With frequent releases and continuous integration, automated tests ensure quality can keep pace with development.
 
-### 🔹 Consistency Builds Trust in Releases
+🔹 Consistency Builds Trust in Releases
 Well-designed automation scripts provide reliable and repeatable validation across environments.
 
-### 🔹 AI Is Shaping the Future of Testing
+🔹 AI Is Shaping the Future of Testing
 Tools like Mabl AI demonstrate how AI can assist with intelligent test creation, self-healing tests, and smarter execution strategies.
 
 ## Looking Ahead
