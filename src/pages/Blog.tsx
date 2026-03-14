@@ -199,9 +199,10 @@ const Blog = () => {
             <article>
               {selectedArticle.video ? (
                 <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img
+                  <video
                     src={selectedArticle.video}
-                    alt={selectedArticle.title}
+                    poster={selectedArticle.image}
+                    controls
                     className="w-full h-full object-cover"
                   />
                 </div>
