@@ -52,6 +52,7 @@ Quality today is not just a final checkpoint — it is a continuous practice pow
 Excited to keep expanding my skills in test automation, AI-assisted testing, and scalable quality practices.
 
 What automation tools or AI testing platforms have you explored in your QA journey?`,
+    video: "/videos/qa_automation_roadmap.mp4",
     image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=400&fit=crop",
     date: "2025-03-14",
     readTime: "4 min read"
@@ -198,9 +199,10 @@ const Blog = () => {
             <article>
               {selectedArticle.video ? (
                 <div className="aspect-video rounded-xl overflow-hidden mb-8">
-                  <img
+                  <video
                     src={selectedArticle.video}
-                    alt={selectedArticle.title}
+                    poster={selectedArticle.image}
+                    controls
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -298,9 +300,10 @@ const Blog = () => {
               >
                 <div className="aspect-video overflow-hidden">
                   {article.video ? (
-                    <img
+                    <video
                       src={article.video}
-                      alt={article.title}
+                      poster={article.image}
+                      muted
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : article.image ? (
