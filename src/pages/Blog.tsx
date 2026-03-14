@@ -300,9 +300,10 @@ const Blog = () => {
               >
                 <div className="aspect-video overflow-hidden">
                   {article.video ? (
-                    <img
+                    <video
                       src={article.video}
-                      alt={article.title}
+                      poster={article.image}
+                      muted
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : article.image ? (
