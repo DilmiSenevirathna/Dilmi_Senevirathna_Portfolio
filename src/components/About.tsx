@@ -1,5 +1,6 @@
-import { Code, TestTube, Globe } from "lucide-react";
+import { Code, TestTube, Globe, CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export const About = () => {
   const highlights = [
@@ -40,6 +41,87 @@ export const About = () => {
               bug-free, high-performance applications. Passionate about continuous testing, quality metrics, 
               and implementing best practices in QA processes.
             </p>
+          </Card>
+        </div>
+
+        {/* Good-to-have QA skills in demand */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <Card className="p-8 md:p-10 border-2 hover:shadow-xl transition-shadow">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full gradient-primary">
+                <CheckCircle2 className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold">
+                In-Demand QA Skills <span className="gradient-text">(Good to Have)</span>
+              </h3>
+            </div>
+            <p className="text-muted-foreground mb-6">
+              Trending manual & automation QA skills currently sought after in the job market.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                  🧪 Manual Testing
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Exploratory Testing",
+                    "Risk-Based Testing",
+                    "Accessibility (WCAG)",
+                    "Cross-Browser Testing",
+                    "Mobile Testing",
+                    "API Testing (Postman)",
+                    "SQL & DB Validation",
+                    "Agile / Scrum",
+                    "Jira & TestRail",
+                    "Bug Triage & RCA",
+                    "Usability Testing",
+                    "Security Testing Basics",
+                  ].map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="text-sm py-1.5 px-3 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                  🤖 Automation Testing
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Playwright",
+                    "Cypress",
+                    "Selenium WebDriver",
+                    "Mabl AI",
+                    "TestNG / JUnit",
+                    "REST Assured",
+                    "CI/CD (GitHub Actions, Jenkins)",
+                    "Docker Basics",
+                    "Git & GitHub",
+                    "Page Object Model",
+                    "BDD (Cucumber)",
+                    "Performance (JMeter / k6)",
+                    "AI-Assisted Testing",
+                    "TypeScript / Python",
+                  ].map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="text-sm py-1.5 px-3 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
           </Card>
         </div>
 
