@@ -135,6 +135,19 @@ export const Navigation = () => {
             ))}
           </div>
 
+          {/* Back to Landing */}
+          <Link
+            to="/"
+            className={`hidden md:inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-full border transition-all duration-300 ${
+              isScrolled
+                ? "bg-muted/30 backdrop-blur-sm border-border/30 text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                : "bg-white/10 backdrop-blur-sm border-white/20 text-white/90 hover:text-white hover:bg-white/20"
+            }`}
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Landing
+          </Link>
+
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
