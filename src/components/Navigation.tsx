@@ -53,8 +53,8 @@ export const Navigation = () => {
       return;
     }
 
-    if (location.pathname !== "/") {
-      navigate("/");
+    if (location.pathname !== "/qa") {
+      navigate("/qa");
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
