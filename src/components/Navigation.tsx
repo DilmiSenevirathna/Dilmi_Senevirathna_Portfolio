@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Bug, ShieldCheck } from "lucide-react";
+import { Menu, X, Bug, ShieldCheck, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const navItems = [
   { label: "About", href: "#about", isSection: true },
