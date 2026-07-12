@@ -30,7 +30,7 @@ export const Hero = () => {
             </p>
             
             <p className="text-lg text-white/80 max-w-xl">
-              Quality Assurance Engineer with over 1.5 years of experience specializing in test automation, performance testing, and software quality validation. Skilled in Playwright, Selenium, JMeter, and modern testing methodologies.
+              Quality Assurance Engineer with over 2 years of experience specializing in test automation, performance testing, and software quality validation. Skilled in Playwright, Selenium, JMeter, and modern testing methodologies.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">

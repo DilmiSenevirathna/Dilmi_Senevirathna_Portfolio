@@ -34,8 +34,8 @@ export const About = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <Card className="p-8 md:p-12 border-2 hover:shadow-xl transition-shadow">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Quality Assurance Engineer with over 1.5 years of hands-on experience in software testing, 
-              test automation, and performance validation. Specialized in creating robust test frameworks 
+              Quality Assurance Engineer with over 2 years of hands-on experience in software testing,
+              test automation, and performance validation. Specialized in creating robust test frameworks
               using Playwright, Selenium, and JMeter to ensure software reliability and quality. Proficient 
               in both manual and automated testing methodologies, with a strong focus on delivering 
               bug-free, high-performance applications. Passionate about continuous testing, quality metrics, 
