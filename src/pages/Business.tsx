@@ -36,23 +36,18 @@ const BusinessNav = () => {
             Dilmi · Business
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-3">
-          <div className="flex items-center gap-1 rounded-full px-2 py-1.5 border border-white/20 bg-white/5 backdrop-blur-md">
-            {items.map((it) =>
-              it.to ? (
-                <Link key={it.label} to={it.to} className="px-4 py-2 text-sm font-medium rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all">
-                  {it.label}
-                </Link>
-              ) : (
-                <a key={it.label} href={it.href} className="px-4 py-2 text-sm font-medium rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all">
-                  {it.label}
-                </a>
-              )
-            )}
-          </div>
-          <Link to="/" className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-full border border-amber-300/30 bg-amber-300/10 text-amber-200 hover:bg-amber-300/20 transition-all">
-            <ArrowLeft className="w-4 h-4" /> Landing
-          </Link>
+        <div className="hidden md:flex items-center gap-1 rounded-full px-2 py-1.5 border border-white/20 bg-white/5 backdrop-blur-md">
+          {items.map((it) =>
+            it.to ? (
+              <Link key={it.label} to={it.to} className="px-4 py-2 text-sm font-medium rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all">
+                {it.label}
+              </Link>
+            ) : (
+              <a key={it.label} href={it.href} className="px-4 py-2 text-sm font-medium rounded-full text-white/85 hover:text-white hover:bg-white/10 transition-all">
+                {it.label}
+              </a>
+            )
+          )}
         </div>
       </div>
     </nav>
