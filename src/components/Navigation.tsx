@@ -25,7 +25,7 @@ export const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      if (location.pathname === "/qa") {
+      if (location.pathname === "/") {
         const sections = navItems
           .filter((item) => item.isSection)
           .map((item) => document.querySelector(item.href) as HTMLElement | null);
@@ -53,8 +53,8 @@ export const Navigation = () => {
       return;
     }
 
-    if (location.pathname !== "/qa") {
-      navigate("/qa");
+    if (location.pathname !== "/") {
+      navigate("/");
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
