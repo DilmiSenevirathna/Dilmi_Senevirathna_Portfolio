@@ -52,7 +52,7 @@ export const About = () => {
                 <CheckCircle2 className="h-5 w-5 text-white" />
               </div>
               <h3 className="text-2xl font-bold">
-                In-Demand QA Skills <span className="gradient-text">(Good to Have)</span>
+                In-Demand QA Skills
               </h3>
             </div>
             <p className="text-muted-foreground mb-6">
