@@ -1,4 +1,4 @@
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePicture from "@/assets/profile-picture.png";
 
