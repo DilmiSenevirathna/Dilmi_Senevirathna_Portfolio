@@ -10,9 +10,6 @@ export const Footer = () => {
             <p className="text-muted-foreground">
               © {new Date().getFullYear()} Dilmi Senevirathna. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Built with React, TypeScript & Tailwind CSS
-            </p>
           </div>
 
           {/* Social Links */}
