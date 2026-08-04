@@ -1,4 +1,4 @@
-import { GraduationCap, Award, FileCheck } from "lucide-react";
+import { GraduationCap, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export const Education = () => {
