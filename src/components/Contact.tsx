@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Languages } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -99,10 +99,25 @@ export const Contact = () => {
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Availability</h4>
-                  <p className="text-muted-foreground">
-                    Available for freelance projects and full-time opportunities
-                  </p>
+                  <h4 className="font-semibold mb-1">Phone</h4>
+                  <a
+                    href="tel:+94775765299"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +94 775 765299
+                  </a>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-2 hover:shadow-lg transition-all hover:-translate-y-1">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center flex-shrink-0">
+                  <Languages className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Languages</h4>
+                  <p className="text-muted-foreground">Sinhala, English</p>
                 </div>
               </div>
             </Card>

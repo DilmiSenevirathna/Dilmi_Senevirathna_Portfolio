@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -27,7 +27,7 @@ export const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/dilmi-senevirathna-6b6933228"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-background border-2 hover:border-primary hover:shadow-lg transition-all"
@@ -41,6 +41,13 @@ export const Footer = () => {
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
+            </a>
+            <a
+              href="tel:+94775765299"
+              className="p-3 rounded-full bg-background border-2 hover:border-primary hover:shadow-lg transition-all"
+              aria-label="Phone"
+            >
+              <Phone className="h-5 w-5" />
             </a>
           </div>
         </div>
