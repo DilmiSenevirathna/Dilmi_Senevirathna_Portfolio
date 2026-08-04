@@ -1,4 +1,4 @@
-import { GraduationCap, Award, FileCheck } from "lucide-react";
+import { GraduationCap, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export const Education = () => {
@@ -48,22 +48,6 @@ export const Education = () => {
             </div>
           </Card>
 
-          {/* ISTQB Certificate */}
-          <Card className="p-8 border-2 hover:shadow-lg transition-all hover:-translate-y-1">
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center">
-                  <FileCheck className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2">ISTQB Foundation Level Certificate</h3>
-                <p className="text-primary font-semibold mb-2">S L Software Testing Board</p>
-                <p className="text-muted-foreground mb-2">Reading</p>
-                <p className="text-muted-foreground">Preparing for September exam</p>
-              </div>
-            </div>
-          </Card>
 
           {/* Diplomas */}
           <Card className="p-8 border-2 hover:shadow-lg transition-all hover:-translate-y-1">
