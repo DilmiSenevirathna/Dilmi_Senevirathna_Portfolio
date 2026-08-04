@@ -65,18 +65,27 @@ export const Hero = () => {
                 <Github className="h-5 w-5 text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/dilmi-senevirathna-6b6933228"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5 text-white" />
               </a>
               <a
                 href="mailto:chathuryadilmi@gmail.com"
                 className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+                aria-label="Email"
               >
                 <Mail className="h-5 w-5 text-white" />
+              </a>
+              <a
+                href="tel:+94775765299"
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+                aria-label="Phone"
+              >
+                <Phone className="h-5 w-5 text-white" />
               </a>
             </div>
           </div>
