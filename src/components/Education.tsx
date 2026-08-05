@@ -43,6 +43,7 @@ export const Education = () => {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">BA in Business Administration and HRM (HND Level)</h3>
                 <p className="text-primary font-semibold mb-2">IMBS Green Campus</p>
+                <p className="text-muted-foreground mb-2">2025 - 2027</p>
                 <p className="text-muted-foreground">Focused on business administration, organizational behavior, recruitment, employee relations, and HR strategy.</p>
               </div>
             </div>
