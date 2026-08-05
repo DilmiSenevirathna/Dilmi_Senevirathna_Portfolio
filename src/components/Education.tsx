@@ -24,7 +24,7 @@ export const Education = () => {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Bachelor of Software Engineering (Honours)</h3>
                 <p className="text-primary font-semibold mb-2">Open University Sri Lanka</p>
-                <p className="text-muted-foreground mb-2">2021 - Present</p>
+                <p className="text-muted-foreground mb-2">2021 - 2026</p>
                 <p className="text-muted-foreground">
                   Currently pursuing degree with focus on software development methodologies, algorithms, and system design.
                 </p>
@@ -41,9 +41,9 @@ export const Education = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2">Bachelor of Arts in Human Resources Management (HND Level)</h3>
+                <h3 className="text-2xl font-bold mb-2">BA in Business Administration and HRM (HND Level)</h3>
                 <p className="text-primary font-semibold mb-2">IMBS Green Campus</p>
-                <p className="text-muted-foreground">Focused on organizational behavior, recruitment, employee relations, and HR strategy.</p>
+                <p className="text-muted-foreground">Focused on business administration, organizational behavior, recruitment, employee relations, and HR strategy.</p>
               </div>
             </div>
           </Card>
