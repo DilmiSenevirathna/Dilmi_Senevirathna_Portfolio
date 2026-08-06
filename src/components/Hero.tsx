@@ -26,7 +26,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 font-light">
-              QA Engineer | Software Engineer | Web Developer
+              QA Engineer | Software Engineer
             </p>
             
             <p className="text-lg text-white/80 max-w-xl">
