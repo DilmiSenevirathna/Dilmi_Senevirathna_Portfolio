@@ -8,7 +8,7 @@ export const QAReports = () => {
     {
       title: "Sufra OS - Full Performance Testing Project",
       description: "This project helped me strengthen my skills in ensuring software reliability, responsiveness, and stability under varying user loads.",
-      videoUrl: "/videos/sufra_os.webm",
+      videoUrl: `${import.meta.env.BASE_URL}videos/sufra_os.webm`,
       reportUrl: "https://dilsenevirathna.github.io/Sufra_OS_Full-Testing-Project/index.html",
       github: "https://github.com/DilSenevirathna/Sufra_OS_Full-Testing-Project",
       details: {
@@ -28,7 +28,7 @@ export const QAReports = () => {
     {
       title: "ArivPay Sign-Up Process - Playwright Test Automation",
       description: "This project helped me strengthen my skills in UI automation, test design, and validation of multi-step registration workflows — key areas in ensuring a smooth and reliable user experience.",
-      videoUrl: "/videos/ariv_pay.webm",
+      videoUrl: `${import.meta.env.BASE_URL}videos/ariv_pay.webm`,
       reportUrl: "https://dilsenevirathna.github.io/ArivPay_SignUp_process_PlaywrightsTest/",
       github: "https://github.com/DilSenevirathna/ArivPay_SignUp_process_PlaywrightsTestrepo",
       details: {
@@ -181,7 +181,7 @@ export const QAReports = () => {
                         <video
                           controls
                           className="w-full h-full object-cover"
-                          poster={project.videoUrl.includes('sufra') ? '/thumbnails/sufra_os_thumb.jpg' : '/thumbnails/ariv_pay_thumb.jpg'}
+                          poster={`${import.meta.env.BASE_URL}thumbnails/${project.videoUrl.includes("sufra") ? "sufra_os_thumb.jpg" : "ariv_pay_thumb.jpg"}`}
                         >
                             <source src={project.videoUrl} type="video/webm" />
                             Your browser does not support the video tag.
